@@ -1,120 +1,24 @@
-                                                         🛒 Zepto Sales Data Analysis Project
-                                                        -----------------------------------------
-📌 Project Overview
+🛒 ZEPTO SALES DATA ANALYSIS PROJECT
+##📖 Project Overview
+This project focuses on analyzing real-world sales data from Zepto, a quick-commerce platform. The objective was to perform end-to-end data analysis — from raw data cleaning to generating meaningful business insights using Python. The dataset contains 200,000+ transactional records along with product catalog information. The project demonstrates practical implementation of data preprocessing, exploratory data analysis (EDA), aggregation, and visualization techniques.
 
-This project focuses on analyzing real-world sales data from Zepto, a quick-commerce platform. The objective of this project is to perform data cleaning, exploratory data analysis (EDA), aggregation, and visualization using Python.
+##🛠️ Tech Stack
+Language: Python Libraries: - Pandas for data manipulation and cleaning. Matplotlib & Seaborn for data visualization. NumPy for numerical operations.
 
-The dataset contains over 200,000 sales transaction records along with a product catalog. Through this project, I implemented a complete data analysis workflow — from raw data processing to generating meaningful business insights.
+##📂 Dataset Description
+The analysis utilizes two primary datasets: zepto_sales.csv: Contains transaction details including order_id, order_date, city, delivery_status, and total_amount. zepto_products.csv: Provides metadata for products, including product_name, category, and base_price. 🚀 Key Features & Workflow
 
-📂 Dataset Description
+##1. Data Cleaning 🧼
+Real-world data is often messy. This project handles: Missing Values: Dropped nulls in critical categorical columns like city and delivery_status. For numerical gaps in delivery_time_mins, mean imputation was used to maintain data integrity. Duplicates: Identified and removed 216 duplicate records to prevent biased statistics. Formatting: Converted order_date to proper datetime objects for time-series analysis.
 
-The project uses two datasets:
+##2. Exploratory Data Analysis (EDA) 🔍
+Top Performers: Identified high-revenue products such as Handwash (Personal Care) and Paneer 200g (Dairy & Eggs). Geographical Analysis: Ranked cities by total sales, with Mumbai and Bangalore leading the revenue charts. Delivery Metrics: Calculated average delivery times across different cities to monitor service efficiency.
 
-1️⃣ zepto_sales.csv
-Contains transactional sales data with the following columns:
+##3. Data Visualization 📈
+The project features a comprehensive 3x3 visualization grid showcasing: Trends: Monthly sales growth throughout 2024. Distributions: Histograms of delivery times and pie charts of category-wise sales. Correlations: Scatter plots of quantity vs. total amount. Advanced Insights: A heatmap representing sales density by city and month.
 
-order_id – Unique order identifier
+##📊 Sample Insights
+Top Category: Personal Care leads in total sales amount (~23.4M). Delivery Efficiency: Average delivery time remains consistent across cities at approximately 26 minutes. Sales Peaks: December (2024-12) recorded the highest monthly sales trend. image image
 
-order_date – Date and time of order
-
-product_id – Product identifier
-
-quantity – Units sold
-
-city – City of order
-
-delivery_status – Delivery status (Delivered, Cancelled, Returned)
-
-customer_id – Customer identifier
-
-delivery_time_mins – Delivery time in minutes
-
-total_amount – Total transaction amount
-
-2️⃣ zepto_products.csv
-
-Contains product catalog information:
-
-product_id – Unique product identifier
-
-product_name – Name of product
-
-category – Product category
-
-base_price – Base price of product
-
-🛠 Technologies Used
-
-Python
-
-Pandas
-
-Matplotlib
-
-Seaborn
-
-Jupyter Notebook
-
-🔎 Project Workflow
-✅ Step 1: Data Loading & Exploration
-
-Loaded both datasets using Pandas
-
-Checked shape, data types, summary statistics
-
-Examined missing values and duplicates
-
-✅ Step 2: Data Cleaning
-
-Removed rows with missing values in city and delivery_status
-
-Filled missing values in delivery_time_mins using mean
-
-Removed duplicate records
-
-Converted order_date into datetime format
-
-✅ Step 3: Data Analysis
-
-Performed aggregation and grouping operations to extract insights such as:
-
-Minimum, maximum, and average transaction amount
-
-Top 5 products by total sales
-
-Total sales by city
-
-Average delivery time by city
-
-Monthly sales trend
-
-Sales by product category
-
-✅ Step 4: Data Visualization
-
-Created meaningful visualizations including:
-
-Bar charts (Top products, Sales by city)
-
-Line chart (Monthly sales trend)
-
-Pie chart (Sales by category)
-
-Histogram (Delivery time distribution)
-
-📊 Key Insights
-
-Identified the highest revenue-generating products
-
-Determined top-performing cities based on sales
-
-Analyzed delivery performance across cities
-
-Observed monthly sales trends
-
-
-Evaluated contribution of each product category to total revenue
-
-
-
-
+##💻 How to Run
+Clone this repository. Ensure you have the datasets (zepto_sales (2).csv and zepto_products.csv) in the project directory. Install dependencies: pip install pandas matplotlib seaborn. Run the Jupyter Notebook: zepto_Final_Project.ipynb.
